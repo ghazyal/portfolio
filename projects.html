@@ -54,6 +54,53 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        .hamburger {
+          position: relative;
+          width: 30px;
+          height: 24px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0;
+        }
+        
+        .hamburger span {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: blueviolet;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+          left: 0;
+        }
+        
+        /* Default position */
+        .hamburger span:nth-child(1) {
+          top: 0;
+        }
+        .hamburger span:nth-child(2) {
+          top: 10px;
+        }
+        .hamburger span:nth-child(3) {
+          top: 20px;
+        }
+        
+        /* Active (jadi X) */
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg);
+          top: 10px;
+        }
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 10px;
+        }
 
     </style>
 </head>
@@ -63,8 +110,10 @@
         <nav class="navbar navbar-expand-lg bg-body-none">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="https://ghazyal.github.io/portfolio/">Ghazy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="hamburger" id="hamburgerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""></span>
+                    <span class=""></span>
+                    <span class=""></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -205,8 +254,14 @@
         </section>
           
     </main>
-      
+
+    
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.getElementById('hamburgerBtn').addEventListener('click', function () {
+              this.classList.toggle('active');
+        });
+    </script>
     <script>
         AOS.init({
             duration: 1000
