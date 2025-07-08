@@ -36,6 +36,7 @@
       border: none;
       padding: 0;
       cursor: pointer;
+      position: relative;
     }
     .hamburger span {
       display: block;
@@ -48,14 +49,19 @@
     
     /* Saat aktif */
     .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
+      transform: rotate(45deg);
+      position: absolute;
     }
+    
     .hamburger.active span:nth-child(2) {
       opacity: 0;
     }
+    
     .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
+      transform: rotate(-45deg);
+      position: absolute;
     }
+
 
 
     
