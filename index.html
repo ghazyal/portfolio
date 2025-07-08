@@ -27,32 +27,49 @@
     }
 
     .hamburger {
+      position: relative;
+      width: 30px;
+      height: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      background: none;
-      border: none;
       padding: 0;
-      cursor: pointer;
     }
+    
     .hamburger span {
       display: block;
+      position: absolute;
       width: 100%;
       height: 3px;
       background-color: blueviolet;
       border-radius: 2px;
       transition: all 0.3s ease;
+      left: 0;
     }
     
-    /* Saat aktif */
+    .hamburger span:nth-child(1) {
+      top: 0;
+    }
+    .hamburger span:nth-child(2) {
+      top: 10px;
+    }
+    .hamburger span:nth-child(3) {
+      top: 20px;
+    }
+    
     .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(3px, 3px);
+      transform: rotate(45deg);
+      top: 10px;
     }
-    
     .hamburger.active span:nth-child(2) {
-      transform: rotate(-45deg) translate(4px, -4px);
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 10px;
     }
 
   </style>
@@ -184,11 +201,9 @@
     </main>
 
   <script>
-    const hamburger = document.getElementById("hamburgerBtn");
-  
-    hamburger.addEventListener("click", function () {
-      this.classList.toggle("active");
-    });
+    document.getElementById('hamburgerBtn').addEventListener('click', function () {
+      this.classList.toggle('active');
+  });
   </script>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
