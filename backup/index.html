@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghazy | Front-End & Design</title>
+  <link rel="icon" href="https://ghazyal.github.io/portfolio/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+   body {
+      min-height: 100vh;
+      margin: 0;
+      background: radial-gradient(circle at center, #00ff00 0%, #000000 70%);
+      color: #fff;
+    }
+
+    .nav-link{
+      color: #fff;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #00ff00 !important;
+      text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+    }
+    
+    *{
+        font-family: "Poppins", sans-serif;
+    }
+
+    .active {
+      color: #00ff00 !important;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.9);
+    }
+    
+    .judul{
+        font-size: 60px;
+    }
+
+    .hamburger {
+      position: relative;
+      width: 30px;
+      height: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0;
+    }
+    
+    .hamburger span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #00ff00;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      left: 0;
+    }
+    
+    .hamburger span:nth-child(1) {
+      top: 0;
+    }
+    .hamburger span:nth-child(2) {
+      top: 10px;
+    }
+    .hamburger span:nth-child(3) {
+      top: 20px;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 10px;
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 10px;
+    }
+    
+    @media (max-width: 991.98px) {
+      .hamburger {
+        display: block;
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-nav">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-white" href="https://ghazyal.github.io/portfolio/">Ghazy</a>
+                <button class="hamburger d-block d-lg-none" type="button" id="hamburgerBtn" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class=""></span>
+                    <span class=""></span>
+                    <span class=""></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://ghazyal.github.io/portfolio/">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          My Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/frontend.html">Front-End Webdev</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/uiux.html">UI/UX Design</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/graphic.html">Graphic Design</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/photo.html">Photography</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ghazyal.github.io/portfolio/activity.html">My Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ghazyal.github.io/portfolio/about.html">About Me</a>
+                    </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="mailto:abdullahgalfa@gmail.com" class="btn btn-dark rounded-pill"><i class="fa fa-comments" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main style="margin-top: 8%;">
+        <section class="intro">
+            <div class="container px-4 px-lg-5">
+                <div class="row align-items-center justify-content-center">
+            
+                    <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right">
+                        <p style="font-size: 20px;" class="text-dark mb-0">Hi, I am Ghazy👋</p>
+                        <h1 class="fw-bold judul mt-1" style="color: blueviolet;">
+                            Creative Design & <br><span class="text-dark">Developer</span>
+                        </h1>
+                        <p class="text-dark">
+                            Sebagai Creative Designer & Developer, saya tidak hanya membuat tampilan yang keren. Saya menciptakan 
+                          pengalaman pengguna yang memukau dan intuitif, karena saya percaya karya digital bukan sekadar visual, tapi juga tentang rasa.
+                        </p>
+                        <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                            <a href="https://ghazyal.github.io/portfolio/about.html" class="btn btn-dark px-4 btn-sm shadow-sm">Tentang Saya</a>
+                        </div>
+                    </div>
+            
+                    <div class="col-lg-5 text-center d-none d-lg-block" data-aos="fade-left">
+                        <img src="https://ghazyal.github.io/portfolio/favicon.svg" alt="Foto Profil Ghazy" class="img-fluid rounded-pill shadow-lg" style="max-width: 350px;">
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-5 text-white mt-5">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center fw-bold mb-5 text-dark" data-aos="fade">Keahlian & Tech Stack</h2>
+                <div class="row g-4 justify-content-center">
+          
+                    <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card bg-gradient border-0 shadow-lg h-100 text-center p-3 hover-scale" style="background: blueviolet;">
+                            <div class="card-body">
+                                <i class="fa-solid fa-laptop-code fa-3x text-white mb-3"></i>
+                                <h5 class="fw-bold">Front-End</h5>
+                                <p class="text-light small">HTML5, CSS3, JavaScript, Bootstrap, Tailwind, React</p>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card bg-gradient border-0 shadow-lg h-100 text-center p-3 hover-scale" style="background: blueviolet;">
+                            <div class="card-body">
+                                <i class="fa-solid fa-pencil-ruler fa-3x text-white mb-3"></i>
+                                <h5 class="fw-bold">UI/UX Design</h5>
+                                <p class="text-light small">Figma, Wireframe, Prototyping, Heuristik, Responsive Design</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card bg-gradient border-0 shadow-lg h-100 text-center p-3 hover-scale" style="background: blueviolet;">
+                            <div class="card-body">
+                                <i class="fa-solid fa-palette fa-3x text-white mb-3"></i>
+                                <h5 class="fw-bold">Graphic Design</h5>
+                                <p class="text-light small">Photoshop, Illustrator, Premiere Pro, Layout Design, Branding</p>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card bg-gradient border-0 shadow-lg h-100 text-center p-3 hover-scale" style="background: blueviolet;">
+                            <div class="card-body">
+                                <i class="fa-solid fa-camera fa-3x text-white mb-3"></i>
+                                <h5 class="fw-bold">Photography</h5>
+                                <p class="text-light small">Lightroom, Composition, Editing, Visual Storytelling</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                          <div class="card bg-gradient border-0 shadow-lg h-100 text-center p-3 hover-scale" style="background: blueviolet;">
+                              <div class="card-body">
+                                  <i class="fa-solid fa-screwdriver-wrench fa-3x text-white mb-3"></i>
+                                  <h5 class="fw-bold">Tools</h5>
+                                  <p class="text-light small">VSCode, GitHub, Git, DevTools, Netlify, XAMPP</p>
+                              </div>
+                          </div>
+                      </div>
+          
+                    <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="card bg-gradient border-0 shadow-lg h-100 text-center p-3 hover-scale" style="background: blueviolet;">
+                            <div class="card-body">
+                                <i class="fa-solid fa-brain fa-3x text-white mb-3"></i>
+                                <h5 class="fw-bold">Soft Skills</h5>
+                                <p class="text-light small">Problem Solving, Komunikasi, Kolaborasi, Time Management</p>
+                            </div>
+                        </div>
+                    </div>
+          
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 mt-5 contact">
+            <div class="container text-center" data-aos="fade-up">
+                <h2 class="fw-bold mb-3">Tertarik Bekerja Sama?</h2>
+                <p class="mb-4 text-muted">
+                    Saya terbuka untuk proyek freelance, kolaborasi, atau full-time remote. Jangan ragu untuk menghubungi saya!
+                </p>
+          
+                <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+                
+                    <a href="mailto:abdullahgalfa@gmail.com" class="btn btn-dark px-4">
+                        <i class="fa-solid fa-envelope me-2"></i>Email Saya
+                    </a>
+                </div>
+          
+            </div>
+        </section>
+          
+    </main>
+
+  <script>
+    document.getElementById('hamburgerBtn').addEventListener('click', function () {
+      this.classList.toggle('active');
+  });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
