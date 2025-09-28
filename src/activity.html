@@ -5,121 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghazy | Front-End & Design</title>
-    <link rel="icon" href="https://ghazyal.github.io/portfolio/favicon.svg">
+    <link rel="icon" href="https://ghazyal.github.io/portfolio/assets/image/favicon.svg">
+    <link rel="stylesheet" href="https://ghazyal.github.io/portfolio/assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        *{
-            font-family: "Poppins", sans-serif;
-        }
-
-        .active{
-            color: blueviolet !important;
-            font-weight: 700;
-        }
-
-        .judul{
-            font-size: 60px;
-        }
-        
-        .journey-grid .journey-box {
-          margin-bottom: 40px;
-        }
-
-        .journey-box .box-content {
-          background: #f8f8f8;
-          border-radius: 12px;
-          padding: 20px;
-          height: 100%;
-          border-top: 4px solid blueviolet;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-          position: relative;
-        }
-
-        .right-arrow::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: -25px;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-          background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='blueviolet' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-        }
-
-        .journey-box:last-child .right-arrow::after {
-          display: none;
-        }
-
-        .hamburger {
-          position: relative;
-          width: 30px;
-          height: 24px;
-          background: none;
-          border: none;
-          cursor: pointer;
-          flex-direction: column;
-          justify-content: space-between;
-          padding: 0;
-        }
-        
-        .hamburger span {
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 3px;
-          background-color: blueviolet;
-          border-radius: 2px;
-          transition: all 0.3s ease;
-          left: 0;
-        }
-        
-        .hamburger span:nth-child(1) {
-          top: 0;
-        }
-        .hamburger span:nth-child(2) {
-          top: 10px;
-        }
-        .hamburger span:nth-child(3) {
-          top: 20px;
-        }
-        
-        .hamburger.active span:nth-child(1) {
-          transform: rotate(45deg);
-          top: 10px;
-        }
-        .hamburger.active span:nth-child(2) {
-          opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-          transform: rotate(-45deg);
-          top: 10px;
-        }
-
-        @media (max-width: 991.98px) {
-          .hamburger {
-            display: block;
-          }
-          .right-arrow::after {
-            display: none !important;
-          }
-        }
-        
-        @media (min-width: 992px) {
-          .hamburger {
-            display: none;
-          }
-        }
-
-
-    </style>
 </head>
 <body>
     <header>
@@ -141,17 +33,17 @@
                           My Projects
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/frontend.html">Front-End Webdev</a></li>
-                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/uiux.html">UI/UX Design</a></li>
-                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/graphic.html">Graphic Design</a></li>
-                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/photo.html">Photography</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/src/frontend.html">Front-End Webdev</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/src/uiux.html">UI/UX Design</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/src/graphic.html">Graphic Design</a></li>
+                          <li><a class="dropdown-item" href="https://ghazyal.github.io/portfolio/src/photo.html">Photography</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="https://ghazyal.github.io/portfolio/activity.html">My Activities</a>
+                        <a class="nav-link active" href="https://ghazyal.github.io/portfolio/src/activity.html">My Activities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="https://ghazyal.github.io/portfolio/about.html">About Me</a>
+                        <a class="nav-link" aria-current="page" href="https://ghazyal.github.io/src/portfolio/about.html">About Me</a>
                     </li>
                     </ul>
                     <div class="d-flex">
@@ -166,18 +58,18 @@
         <section id="organisasi" class="py-5">
             <div class="container px-4 px-lg-5">
                 <div class="text-start mb-5">
-                  <h2 class="fw-bold" data-aos="fade-right">Organisasi Yang Diikuti</h2>
+                  <h2 class="fw-bold text-white" data-aos="fade-right">Organisasi Yang Diikuti</h2>
                 </div>
 
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-6 col-lg-6" data-aos="zoom-in">
-                        <div class="card shadow-sm bg-gradient border-0 h-100 hover-scale p-3" style="background: blueviolet;">
+                        <div class="card shadow-sm t-stack border-0 h-100 hover-scale p-3">
                             <div class="card-body text-center">
                                 <div class="icon-wrapper d-flex justify-content-center align-items-center mb-3 mt-3" style="height:120px;">
-                                    <img src="https://ghazyal.github.io/portfolio/jbz.png" alt="jbz" class="mb-3 mt-2" width="250">
+                                    <img src="https://ghazyal.github.io/portfolio/assets/image/jbz.png" alt="jbz" class="mb-3 mt-2" width="250">
                                 </div>
                                 <h4 class="text-white mb-1" style="height:90px;">Jabar Bergerak Zillenial <br> Kabupaten Subang</h4>
-                                <p class="mb-0 text-white" style="text-align: justify;">Jabar Bergerak Zillenial (JBZ) merupakan komunitas pemuda Jawa Barat di bawah naungan Jabar 
+                                <p class="mb-0" style="text-align: justify;">Jabar Bergerak Zillenial (JBZ) merupakan komunitas pemuda Jawa Barat di bawah naungan Jabar 
                                     Bergerak yang menjadi ruang kolaborasi, kreativitas, dan aksi nyata generasi muda dengan fokus pada isu sosial, 
                                     pendidikan, lingkungan, dan teknologi untuk memberikan dampak positif bagi masyarakat. Sebagai Ketua Bidang Media, 
                                     saya memimpin tim kreatif dalam mengelola strategi komunikasi visual organisasi dengan merancang infografis, 
@@ -189,13 +81,13 @@
                     </div>
 
                     <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="card shadow-sm bg-gradient border-0 h-100 hover-scale p-3" style="background: blueviolet;">
+                        <div class="card shadow-sm t-stack border-0 h-100 hover-scale p-3">
                             <div class="card-body text-center">
                                 <div class="icon-wrapper d-flex justify-content-center align-items-center mb-3 mt-3" style="height:120px;">
-                                    <img src="https://ghazyal.github.io/portfolio/bem.png" alt="bem" class="img-fluid mb-3 mt-2" style="max-height:100%;">
+                                    <img src="https://ghazyal.github.io/portfolio/assets/image/bem.png" alt="bem" class="img-fluid mb-3 mt-2" style="max-height:100%;">
                                 </div>
                                 <h4 class="text-white mb-1" style="height:90px;">Badan Eksekutif Mahasiswa <br>Universitas Subang</h4>
-                                <p class="mb-0 text-white" style="text-align: justify;">Organisasi mahasiswa tingkat universitas yang menjadi wadah aspirasi, penggerak kegiatan, 
+                                <p class="mb-0" style="text-align: justify;">Organisasi mahasiswa tingkat universitas yang menjadi wadah aspirasi, penggerak kegiatan, 
                                     serta jembatan komunikasi antara mahasiswa dan civitas akademika. Sebagai Menteri Koordinator, saya berperan 
                                     dalam mengkoordinasikan berbagai program kemahasiswaan, mengelola tim, serta memastikan terlaksananya kegiatan yang mendukung 
                                     pengembangan potensi mahasiswa di bidang akademik maupun non-akademik.
@@ -206,11 +98,11 @@
                 </div>
             </div>
         </section>
-        <section class="py-5 bg-gradient text-dark text-center" data-aos="fade-up">
+        <section class="py-5 text-white text-center" data-aos="fade-up">
               <div class="container px-4 px-lg-5">
                     <h2 class="fw-bold mb-3">Yuk Lihat Proyek Keren Saya!</h2>
                     <p class="mb-4 fs-5">Beberapa hasil karya saya dalam Creative Design & Front-End Development bisa kamu lihat di bawah ini.</p>
-                    <a href="https://ghazyal.github.io/portfolio/frontend.html" class="btn btn-dark text-white px-5 py-2 fw-semibold shadow-sm rounded-pill">
+                    <a href="https://ghazyal.github.io/portfolio/src/frontend.html" class="btn btn-dark px-5 py-2 fw-semibold shadow-sm rounded-pill">
                       <i class="fa-solid fa-laptop-code me-2"></i> Lihat My Projects
                     </a>
               </div>
@@ -219,11 +111,7 @@
     </main>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        document.getElementById('hamburgerBtn').addEventListener('click', function () {
-          this.classList.toggle('active');
-        });
-    </script>
+    <script src="https://ghazyal.github.io/portfolio/assets/js/script.js"></script>
     <script>
       AOS.init({
         duration: 1000
