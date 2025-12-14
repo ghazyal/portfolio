@@ -153,7 +153,8 @@
 .badge-heuristik  { background-color: #343a40; color: white; }
 .badge-illustrator  { background-color: #311C04; color: #FF9A00 !important; }
 .badge-youtube { background-color: #FF0000; color: white;}
-.badge-canon { background-color: #ffffff; color: #FF0000 !important;}
+.badge-canon { background-color: #ffffff; color: #FF0000 !important;} 
+.badge-lr { background-color: #1E2A44; color: #31C5F0 !important;} 
 
 /* Tambahan untuk background gelap */
 .badge.light {
